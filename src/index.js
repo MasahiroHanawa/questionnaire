@@ -1,8 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Provider } from 'react-redux';
+import { Router, Route } from 'react-router';
+import Survey from './components/Pages/Survey';
+import createHistory from 'history/createBrowserHistory';
+import finalCreateStore from './stores/store';
 import registerServiceWorker from './registerServiceWorker';
+import 'bootstrap/dist/css/bootstrap.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = finalCreateStore();
+const history = createHistory();
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Router history={history}>
+      <div>
+        <Route exact path="/" component={Survey} />
+      </div>
+    </Router>
+  </Provider>, 
+  document.getElementById('root')
+);
 registerServiceWorker();
