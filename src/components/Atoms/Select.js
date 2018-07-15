@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import PropTypes from 'prop-types'
 class Select extends Component {
   render() {
     return (
@@ -12,6 +12,12 @@ class Select extends Component {
       </div>
     )
   }
+}
+
+Select.propTypes = {
+  onChangeSelect: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  options: PropTypes.array.isRequired,
 }
 
 export default Select

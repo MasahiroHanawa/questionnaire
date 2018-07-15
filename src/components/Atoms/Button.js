@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-
+import PropTypes from 'prop-types'
 class Button extends Component {
   render() {
     return (
       <div>
-        <span className="label label-default">{this.props.title}</span>
         <button type="button" 
           className={this.props.className} 
           name={this.props.name} 
@@ -16,4 +15,13 @@ class Button extends Component {
     )
   }
 }
+
+Button.propTypes = {
+  onClickButton: PropTypes.func.isRequired,
+  className: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isDisabled: PropTypes.bool,
+}
+
+
 export default Button

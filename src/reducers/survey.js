@@ -104,6 +104,7 @@ export default function search(state = initialState, action) {
         message: null
       }
     default:
+      console.log('deo')
       return {
         params: {
           currentQuestion: {

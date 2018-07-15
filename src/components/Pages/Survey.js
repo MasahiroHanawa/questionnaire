@@ -8,17 +8,12 @@ import { bindActionCreators } from 'redux'
 import '../../css/survey.scss'
 class Survey extends Component {
 
-  handleChange (name, e) {
-    this.props.actions.setParam('name', e.target.value)
-  }
-
   componentWillMount() {
     this.props.actions.getQuestion()
     this.props.actions.getAnswer()
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="container">
        <Content survey={this.props} />
@@ -60,7 +55,6 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchProps = (dispatch) => {
-  console.log(actions)
   const dispatchProps = {
     actions: bindActionCreators({
       ...actions,

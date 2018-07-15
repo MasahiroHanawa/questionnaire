@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Select from '../Atoms/Select'
 import _ from 'lodash'
-
+import PropTypes from 'prop-types'
 class SelectAnswer extends Component {
 
   onChangeSelect(value) {
@@ -22,6 +22,28 @@ class SelectAnswer extends Component {
       </div>
     )
   }
+}
+
+SelectAnswer.propTypes = {
+  actions: PropTypes.shape({
+    getAnswer: PropTypes.func.isRequired,
+    getQuestion: PropTypes.func.isRequired,
+    setAnswer: PropTypes.func.isRequired,
+  }),
+  survey: PropTypes.shape({
+    params: PropTypes.shape({
+      answer: PropTypes.string,
+      currentQuestion: PropTypes.object,
+    }),
+    formType: PropTypes.shape({
+      radio: PropTypes.integer,
+      select: PropTypes.integer,
+      text: PropTypes.integer,
+    }),
+    answers: PropTypes.array,
+    answerForms: PropTypes.array,
+    message: PropTypes.string,
+  })
 }
 
 export default SelectAnswer

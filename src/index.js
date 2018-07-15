@@ -5,11 +5,10 @@ import { Router, Route } from 'react-router'
 import Survey from './components/Pages/Survey'
 import createHistory from 'history/createBrowserHistory'
 import finalCreateStore from './stores/store'
-import './css/survey.scss'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import registerServiceWorker from './registerServiceWorker'
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './css/survey.scss'
 
 const store = finalCreateStore()
 const history = createHistory()

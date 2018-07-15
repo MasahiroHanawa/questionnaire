@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import PropTypes from 'prop-types'
 class Radio extends Component {
   render() {
     return (
@@ -10,4 +10,12 @@ class Radio extends Component {
     )
   }
 }
+
+Radio.propTypes = {
+  onClickRadio: PropTypes.func.isRequired,
+  name: PropTypes.string,
+  title: PropTypes.string,
+  id: PropTypes.number,
+}
+
 export default Radio
