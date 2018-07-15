@@ -8,7 +8,7 @@
     {"id": 6, "title": "Is there anything else you'd like to shere about this event?", "type": 1, "answer_manage_id": null}
   ],
   "answers": [
-    {"id": 1, "title" : "Exellent", "answer_manage_ixd": 1},
+    {"id": 1, "title" : "Exellent", "answer_manage_id": 1},
     {"id": 2, "title" : "Very good", "answer_manage_id": 1},
     {"id": 3, "title" : "Good", "answer_manage_id": 1},
     {"id": 4, "title" : "Fair", "answer_manage_id": 1},

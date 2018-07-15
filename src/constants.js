@@ -1,0 +1,6 @@
+export const GET_QUESTION= 'GET_QUESTION'
+export const GET_ANSWER= 'GET_ANSWER'
+export const SET_ANSWER = 'SET_ANSWER'
+export const NEXT = 'NEXT'
+export const PREV = 'PREV'
+export const CONNECTION_FAILED = 'CONNECTION_FAILED'
