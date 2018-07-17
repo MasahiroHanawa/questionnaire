@@ -9,8 +9,10 @@ class TextAnswer extends Component {
 
   render() {
     return (
-      <div className="col-sm-6 col-md-3">
-        <TextArea onChangeText={(value) => this.onChangeText(value)} value={this.props.survey.survey.params.answer} />
+      <div className="survey__text_answer">
+        <TextArea onChangeText={(value) => this.onChangeText(value)} 
+        value={this.props.survey.survey.params.answer}
+        className="survey__text_area" />
       </div>
     )
   }

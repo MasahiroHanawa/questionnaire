@@ -1,7 +1,746 @@
-.survey {
-  text-align: center;
-  &__survey {
+
+/* PC */
+@media screen and (max-width: 1680px) {
+  .survey {
     text-align: center;
-    
+    margin: auto;
+    width: 1280px;
+  }
+  
+  .survey__content {
+    width: 100%;
+  }
+  
+  .survey__radio_answer {
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 10px;
+  }
+  
+  .survey__survey_question {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  
+  .survey__radio {
+    margin-bottom: 5px;
+    text-align: center;
+    float: left;
+    width: 50%;
+  }
+
+  .survey__text_answer {
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 10px;
+  }
+
+  .survey__text_area {
+    width: 50%;
+    height: 120px;
+    overflow: auto;
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  .servey__select {
+    overflow: hidden;
+    width: 55%;
+    margin: 2em auto;
+    text-align: center;
+  }
+  .servey__select select {
+    width: 100%;
+    padding-right: 1em;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: ellipsis;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .servey__select select::-ms-expand {
+    display: none;
+  }
+  .servey__select.servey__option {
+    position: relative;
+    border: 1px solid #bbbbbb;
+    border-radius: 2px;
+    background: #ffffff;
+  }
+  .servey__select.servey__option::before {
+    position: absolute;
+    top: 0.8em;
+    right: 0.9em;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #666666;
+    pointer-events: none;
+  }
+  .servey__select.servey__option:after {
+    position: absolute;
+    top: 0;
+    right: 2.5em;
+    bottom: 0;
+    width: 1px;
+    content: '';
+    border-left: 1px solid #bbbbbb;
+  }
+  .servey__select.servey__option select {
+    padding: 8px 38px 8px 8px;
+    color: #666666;
+  }
+
+  .survey__footer {
+    width: 100%;
+  }
+
+  .survey__prev_area {
+    float: left;
+    width: 50%;
+    min-height:1px;
+  }
+
+  .survey__next_area {
+    float: left;
+    width: 50%;
+    min-height:1px;
+  }
+
+  .survey__button {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    background: #67c5ff;
+    color: white;
+  }
+
+  .survey__button:hover {
+    color: #67c5ff;
+    background: white;
+  }
+
+  .survey__button_desabled {
+    display: inline-block;
+    opacity: 0.5;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    background: #67c5ff;
+    color: white;
+  }
+}
+
+/* Nexus 6P */
+@media screen and (width: 412px) {
+  .survey {
+    text-align: center;
+    margin: auto;
+    width: 412px;
+  }
+  
+  .survey__content {
+    width: 100%;
+  }
+  
+  .survey__radio_answer {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+  
+  .survey__survey_question {
+    margin-bottom: 30px;
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+  }
+
+  .radio_label {
+    text-align: left;
+  }
+  
+  .survey__radio {
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 70px;
+    width: 100%;
+  }
+
+  .survey__text_answer {
+    margin-top: 30px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .survey__text_area {
+    width: 60%;
+    height: 120px;
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  .servey__select {
+    overflow: hidden;
+    width: 60%;
+    margin: 2em auto;
+    text-align: center;
+  }
+  .servey__select select {
+    width: 100%;
+    padding-right: 1em;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: ellipsis;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .servey__select select::-ms-expand {
+    display: none;
+  }
+  .servey__select.servey__option {
+    position: relative;
+    border: 1px solid #bbbbbb;
+    border-radius: 2px;
+    background: #ffffff;
+  }
+  .servey__select.servey__option::before {
+    position: absolute;
+    top: 0.8em;
+    right: 0.9em;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #666666;
+    pointer-events: none;
+  }
+  .servey__select.servey__option:after {
+    position: absolute;
+    top: 0;
+    right: 2.5em;
+    bottom: 0;
+    width: 1px;
+    content: '';
+    border-left: 1px solid #bbbbbb;
+  }
+  .servey__select.servey__option select {
+    padding: 8px 38px 8px 8px;
+    color: #666666;
+  }
+
+  .survey__footer {
+    width: 100%;
+  }
+
+  .survey__prev_area {
+    float: left;
+    width: 50%;
+    min-height:1px;
+  }
+
+  .survey__next_area {
+    float: left;
+    width: 50%;
+    min-height:1px;
+  }
+
+  .survey__button {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    background: #67c5ff;
+    color: white;
+  }
+
+  .survey__button:hover {
+    color: #67c5ff;
+    background: white;
+  }
+
+  .survey__button_desabled {
+    display: inline-block;
+    opacity: 0.5;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    background: #67c5ff;
+    color: white;
+  }
+}
+
+/* iPhone 7 & 8 */
+@media screen and (width: 375px) {
+  .survey {
+    text-align: center;
+    margin: auto;
+    width: 375px;
+  }
+  
+  .survey__content {
+    width: 100%;
+  }
+  
+  .survey__radio_answer {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+  
+  .survey__survey_question {
+    margin-bottom: 30px;
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+  }
+
+  .radio_label {
+    text-align: left;
+  }
+  
+  .survey__radio {
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 70px;
+    width: 100%;
+  }
+
+  .survey__text_answer {
+    margin-top: 30px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .survey__text_area {
+    width: 60%;
+    height: 120px;
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  .servey__select {
+    overflow: hidden;
+    width: 60%;
+    margin: 2em auto;
+    text-align: center;
+  }
+  .servey__select select {
+    width: 100%;
+    padding-right: 1em;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: ellipsis;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .servey__select select::-ms-expand {
+    display: none;
+  }
+  .servey__select.servey__option {
+    position: relative;
+    border: 1px solid #bbbbbb;
+    border-radius: 2px;
+    background: #ffffff;
+  }
+  .servey__select.servey__option::before {
+    position: absolute;
+    top: 0.8em;
+    right: 0.9em;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #666666;
+    pointer-events: none;
+  }
+  .servey__select.servey__option:after {
+    position: absolute;
+    top: 0;
+    right: 2.5em;
+    bottom: 0;
+    width: 1px;
+    content: '';
+    border-left: 1px solid #bbbbbb;
+  }
+  .servey__select.servey__option select {
+    padding: 8px 38px 8px 8px;
+    color: #666666;
+  }
+
+  .survey__footer {
+    width: 100%;
+  }
+
+  .survey__prev_area {
+    float: left;
+    width: 50%;
+    min-height:1px;
+  }
+
+  .survey__next_area {
+    float: left;
+    width: 50%;
+    min-height:1px;
+  }
+
+  .survey__button {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    background: #67c5ff;
+    color: white;
+  }
+
+  .survey__button:hover {
+    color: #67c5ff;
+    background: white;
+  }
+
+  .survey__button_desabled {
+    display: inline-block;
+    opacity: 0.5;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    background: #67c5ff;
+    color: white;
+  }
+}
+
+/* iPhone 7 & 8 Plus */
+@media screen and (width: 414px) {
+  .survey {
+    text-align: center;
+    margin: auto;
+    width: 414px;
+  }
+  
+  .survey__content {
+    width: 100%;
+  }
+  
+  .survey__radio_answer {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+  
+  .survey__survey_question {
+    margin-bottom: 30px;
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+  }
+
+  .radio_label {
+    text-align: left;
+  }
+  
+  .survey__radio {
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 70px;
+    width: 100%;
+  }
+
+  .survey__text_answer {
+    margin-top: 30px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .survey__text_area {
+    width: 60%;
+    height: 120px;
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  .servey__select {
+    overflow: hidden;
+    width: 60%;
+    margin: 2em auto;
+    text-align: center;
+  }
+  .servey__select select {
+    width: 100%;
+    padding-right: 1em;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: ellipsis;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .servey__select select::-ms-expand {
+    display: none;
+  }
+  .servey__select.servey__option {
+    position: relative;
+    border: 1px solid #bbbbbb;
+    border-radius: 2px;
+    background: #ffffff;
+  }
+  .servey__select.servey__option::before {
+    position: absolute;
+    top: 0.8em;
+    right: 0.9em;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #666666;
+    pointer-events: none;
+  }
+  .servey__select.servey__option:after {
+    position: absolute;
+    top: 0;
+    right: 2.5em;
+    bottom: 0;
+    width: 1px;
+    content: '';
+    border-left: 1px solid #bbbbbb;
+  }
+  .servey__select.servey__option select {
+    padding: 8px 38px 8px 8px;
+    color: #666666;
+  }
+
+  .survey__footer {
+    width: 100%;
+  }
+
+  .survey__prev_area {
+    float: left;
+    width: 50%;
+    min-height:1px;
+  }
+
+  .survey__next_area {
+    float: left;
+    width: 50%;
+    min-height:1px;
+  }
+
+  .survey__button {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    background: #67c5ff;
+    color: white;
+  }
+
+  .survey__button:hover {
+    color: #67c5ff;
+    background: white;
+  }
+
+  .survey__button_desabled {
+    display: inline-block;
+    opacity: 0.5;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    background: #67c5ff;
+    color: white;
+  }
+}
+
+/* iPhone X */
+@media screen and (width: 375px) {
+  .survey {
+    text-align: center;
+    margin: auto;
+    width: 375px;
+  }
+  
+  .survey__content {
+    width: 100%;
+  }
+  
+  .survey__radio_answer {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+  
+  .survey__survey_question {
+    margin-bottom: 30px;
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+  }
+
+  .radio_label {
+    text-align: left;
+  }
+  
+  .survey__radio {
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 70px;
+    width: 100%;
+  }
+
+  .survey__text_answer {
+    margin-top: 30px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .survey__text_area {
+    width: 60%;
+    height: 120px;
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  .servey__select {
+    overflow: hidden;
+    width: 60%;
+    margin: 2em auto;
+    text-align: center;
+  }
+  .servey__select select {
+    width: 100%;
+    padding-right: 1em;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: ellipsis;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .servey__select select::-ms-expand {
+    display: none;
+  }
+  .servey__select.servey__option {
+    position: relative;
+    border: 1px solid #bbbbbb;
+    border-radius: 2px;
+    background: #ffffff;
+  }
+  .servey__select.servey__option::before {
+    position: absolute;
+    top: 0.8em;
+    right: 0.9em;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #666666;
+    pointer-events: none;
+  }
+  .servey__select.servey__option:after {
+    position: absolute;
+    top: 0;
+    right: 2.5em;
+    bottom: 0;
+    width: 1px;
+    content: '';
+    border-left: 1px solid #bbbbbb;
+  }
+  .servey__select.servey__option select {
+    padding: 8px 38px 8px 8px;
+    color: #666666;
+  }
+
+  .survey__footer {
+    width: 100%;
+  }
+
+  .survey__prev_area {
+    float: left;
+    width: 50%;
+    min-height:1px;
+  }
+
+  .survey__next_area {
+    float: left;
+    width: 50%;
+    min-height:1px;
+  }
+
+  .survey__button {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    background: #67c5ff;
+    color: white;
+  }
+
+  .survey__button:hover {
+    color: #67c5ff;
+    background: white;
+  }
+
+  .survey__button_desabled {
+    display: inline-block;
+    opacity: 0.5;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    background: #67c5ff;
+    color: white;
   }
 }

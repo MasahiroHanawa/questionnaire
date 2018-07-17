@@ -7,19 +7,19 @@ import { bindActionCreators } from 'redux'
 import '../../css/survey.scss'
 class Result extends Component {
 
-  componentWillReceiveProps() {
+  componentDidUpdate() {
     if (this.props.survey.result === false) {
       this.props.history.push('/')
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.actions.clearSurveyData()
   }
 
   render() {
     return (
-      <div className="container">
+      <div className="result">
         <ResultContent survey={this.props} />
       </div>
     )

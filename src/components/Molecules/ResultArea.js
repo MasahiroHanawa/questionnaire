@@ -5,7 +5,7 @@ import Answer from '../Atoms/Answer'
 class ResultArea extends Component {
   render() {
     return (
-      <div className="col-sm-12 col-md-12">
+      <div className="result__result_area">
         {this.props.survey.survey.answers.map(answer => {
           return <Answer 
             formType={this.props.survey.survey.formType}

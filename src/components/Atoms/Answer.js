@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 class Answer extends Component {
   render() {
     return (
-      <div>
-        <span className="label label-default">{this.props.questions[0].title}</span>
-        <p>{(() => {
+      <div className="result__answer_list">
+        <span className="result__question">{this.props.questions[0].title}</span>
+        <span className="result__answer">{(() => {
           let content = null
           let answerForm = []
           if (this.props.questions[0].type === this.props.formType.text) {
@@ -18,7 +18,7 @@ class Answer extends Component {
           }
           return content
         })()}
-        </p>
+        </span>
       </div>
     )
   }

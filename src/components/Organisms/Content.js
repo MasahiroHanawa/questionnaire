@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 class Content extends Component {
   render() {
     return (
-      <div className="row">
+      <div className="survey__content">
         <Question survey={this.props.survey} />
         {(() => {
           let answerForm = null

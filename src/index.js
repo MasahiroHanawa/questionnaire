@@ -7,9 +7,9 @@ import Result from './components/Pages/Result'
 import createHistory from 'history/createBrowserHistory'
 import finalCreateStore from './stores/store'
 import registerServiceWorker from './registerServiceWorker'
-import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import './css/index.scss'
 import './css/survey.scss'
+import './css/result.scss'
 
 const store = finalCreateStore()
 const history = createHistory()
