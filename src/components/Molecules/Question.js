@@ -4,7 +4,7 @@ import _ from 'lodash'
 class Question extends Component {
   render() {
     return (
-      <div className="col-sm-12 col-md-12">
+      <div className="survey__survey_question">
         {!_.isEmpty(this.props.survey.survey.params.currentQuestion) ?
         this.props.survey.survey.params.currentQuestion.title 
         : ''}

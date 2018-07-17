@@ -5,26 +5,23 @@ import * as actions from '../../actions/survey'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
-import '../../css/survey.scss'
 class Survey extends Component {
 
-  componentWillReceiveProps(nextProps) {
+  componentDidUpdate(nextProps) {
     if (nextProps.survey.result === true) {
       this.props.history.push('/result')
-    } else if (this.props.survey.params.currentQuestion.id !== null &&
+    } else if (nextProps.survey.params.currentQuestion.id !== null &&
     nextProps.survey.params.currentQuestion.id !== this.props.survey.params.currentQuestion.id) {
-      this.props.history.push('/survey/' + (nextProps.survey.params.currentQuestion.id))
+      this.props.history.push('/survey/' + (this.props.survey.params.currentQuestion.id))
     }
   }
-
-  componentWillMount() {
+  componentDidMount() {
     this.props.actions.getQuestion(this.props.location.pathname.substring(8))
     this.props.actions.getAnswer(this.props.location.pathname.substring(8))
   }
-
   render() {
     return (
-      <div className="container">
+      <div className="survey">
         <Content survey={this.props} />
         <Footer survey={this.props} />
       </div>

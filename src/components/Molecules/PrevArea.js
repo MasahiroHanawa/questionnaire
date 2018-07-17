@@ -10,11 +10,11 @@ class PrevArea extends Component {
 
   render() {
     return (
-      <div className="col-sm-6 col-md-6">
+      <div className="survey__prev_area">
         {(() => {
           const button = !_.isEmpty(this.props.survey.survey.answers) &&
-          this.props.survey.survey.params.currentQuestion.id !== this.props.survey.survey.answers[0].quesiton_id ?
-            <Button name="Prev" onClickButton={() => this.onClickButton()} className="btn btn-primary survey__content_prev" /> :
+          this.props.survey.survey.params.currentQuestion.id !== this.props.survey.survey.questions[0].id ?
+            <Button name="Prev" onClickButton={() => this.onClickButton()} className="survey__button survey__content_prev" /> :
             null
           return button
         })()}

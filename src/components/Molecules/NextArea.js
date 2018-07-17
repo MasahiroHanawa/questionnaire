@@ -10,13 +10,13 @@ class NextArea extends Component {
     let className = ''
     let isDisabled = false
     if (_.isEmpty(this.props.survey.survey.params.answer)) {
-      className = "btn btn-primary survey__content_next_desable"
+      className = "survey__button_desabled"
       isDisabled = true
     } else {
-      className = "btn btn-primary survey__content_next"
+      className = "survey__button"
     }
     return (
-      <div className="col-sm-6 col-md-3">
+      <div className="survey__next_area">
         {(() => {
           const button = (this.props.survey.survey.answers.length <= this.props.survey.survey.questions.length) ?
             <Button name="Next" onClickButton={() => this.onClickButton()} className={className} isDisabled={isDisabled} /> :

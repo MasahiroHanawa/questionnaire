@@ -1,7 +1,212 @@
-.result {
-  text-align: center;
-  &__survey {
+
+/* PC */
+@media screen and (max-width: 1680px) {
+  .result {
     text-align: center;
-    
+    margin: auto;
+    width: 1280px;
+  }
+  
+  .result__content {
+    width: 100%;
+    margin: auto;
+  }
+
+  .result__result_area {
+    margin-top: 100px;
+    width: 100%;
+  }
+
+  .result__answer_list {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .result__question {
+    float: left;
+    width: 50%;
+    text-align: left;
+  }
+  .result__answer {
+    float: left;
+    width: 45%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+}
+
+/* Nexus 6P */
+@media screen and (width: 412px) {
+  .result {
+    text-align: center;
+    margin: auto;
+    width: 1280px;
+  }
+  
+  .result__content {
+    width: 100%;
+    margin: auto;
+  }
+
+  .result__result_area {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .result__answer_list {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .result__question {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .result__answer {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* iPhone 4 */
+@media screen and (width: 320px) {
+  .result {
+    text-align: center;
+    margin: auto;
+    width: 1280px;
+  }
+  
+  .result__content {
+    width: 100%;
+    margin: auto;
+  }
+ 
+  .result__result_area {
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  .result__answer_list {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .result__question {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .result__answer {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+
+/* iPhone 7 & 8 */
+@media screen and (width: 375px) {
+  .result {
+    text-align: center;
+    margin: auto;
+    width: 375px;
+  }
+  
+  .result__content {
+    width: 100%;
+    margin: auto;
+  }
+ 
+  .result__result_area {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .result__answer_list {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .result__question {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .result__answer {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+
+/* iPhone 7 & 8 Plus */
+@media screen and (width: 414px) {
+  .result {
+    text-align: center;
+    margin: auto;
+    width: 414px;
+  }
+  
+  .result__content {
+    width: 100%;
+    margin: auto;
+  }
+
+  .result__result_area {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .result__answer_list {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .result__question {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .result__answer {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+
+/* iPhone X */
+@media screen and (width: 375px) {
+  .result {
+    text-align: center;
+    margin: auto;
+    width: 375px;
+  }
+  
+  .result__content {
+    width: 100%;
+    margin: auto;
+  }
+
+  .result__result_area {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .result__answer_list {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .result__question {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .result__answer {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
   }
 }

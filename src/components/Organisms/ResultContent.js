@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 class ResultContent extends Component {
   render() {
     return (
-      <div className="row">
+      <div className="result__content">
         <ResultArea survey={this.props.survey} />
       </div>
     )

@@ -10,24 +10,23 @@ class RadioAnswer extends Component {
 
   render() {
     return (
-      <div className="form-inline col-sm-12 col-md-12">
+      <div className="survey__radio_answer">
         {(() => {
           let answers = _.filter(this.props.survey.survey.answerForms, (a) => {
             return a.answer_manage_id === this.props.survey.survey.params.currentQuestion.answer_manage_id
           })
           let radios = answers.map((answer) => {
             return (
-              <div className="col-sm-12 col-md-6" key={answer.id}>
-                <Radio 
-                  title={answer.title}
-                  id={answer.id}
-                  name="answer"
-                  checked={answer.id === parseInt(this.props.survey.survey.params.answer, 10) ?
-                    true :
-                    false}
-                  onClickRadio={(value) => this.onClickRadio(value)}
-                  />
-              </div>
+              <Radio 
+                title={answer.title}
+                id={answer.id}
+                name="answer"
+                checked={answer.id === parseInt(this.props.survey.survey.params.answer, 10) ?
+                  true :
+                  false}
+                onClickRadio={(value) => this.onClickRadio(value)}
+                key={answer.id}
+                />
             )
           })
           return radios

@@ -5,7 +5,7 @@ import PrevArea from '../Molecules/PrevArea'
 class Footer extends Component {
   render() {
     return (
-      <div className="row">
+      <div className="survey__footer">
         <PrevArea survey={this.props.survey} />
         <NextArea survey={this.props.survey} />
       </div>
