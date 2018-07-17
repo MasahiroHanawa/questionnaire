@@ -1,8 +1,8 @@
 {
   "questions": [
-    {"id": 1, "title": "How woudld you rate this event?", "type": 2, "answer_manage_id": 1},
+    {"id": 1, "title": "How would you rate this event?", "type": 2, "answer_manage_id": 1},
     {"id": 2, "title": "What did you like event?", "type": 1, "answer_manage_id": null},
-    {"id": 3, "title": "How woudld you rate this event?", "type": 2, "answer_manage_id": 1},
+    {"id": 3, "title": "How was this event rule?", "type": 2, "answer_manage_id": 1},
     {"id": 4, "title": "How organized was this event?", "type": 2, "answer_manage_id": 2},
     {"id": 5, "title": "Which country do you want to hold on this event?", "type": 3, "answer_manage_id": 3},
     {"id": 6, "title": "Is there anything else you'd like to shere about this event?", "type": 1, "answer_manage_id": null}

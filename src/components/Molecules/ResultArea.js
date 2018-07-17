@@ -1,19 +1,28 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import _ from 'lodash'
-class Question extends Component {
+import Answer from '../Atoms/Answer'
+
+class ResultArea extends Component {
   render() {
     return (
       <div className="col-sm-12 col-md-12">
-        {!_.isEmpty(this.props.survey.survey.params.currentQuestion) ?
-        this.props.survey.survey.params.currentQuestion.title 
-        : ''}
+        {this.props.survey.survey.answers.map(answer => {
+          return <Answer 
+            formType={this.props.survey.survey.formType}
+            answer={answer} 
+            answerForms={this.props.survey.survey.answerForms} 
+            questions={this.props.survey.survey.questions.filter((q => 
+              q.id === answer.question_id
+            ))} 
+            key={answer.question_id}
+          />
+        })}
       </div>
     )
   }
 }
 
-Question.propTypes = {
+ResultArea.propTypes = {
   actions: PropTypes.shape({
     getAnswer: PropTypes.func.isRequired,
     getQuestion: PropTypes.func.isRequired,
@@ -35,4 +44,4 @@ Question.propTypes = {
   })
 }
 
-export default Question
+export default ResultArea

@@ -18,7 +18,15 @@ class RadioAnswer extends Component {
           let radios = answers.map((answer) => {
             return (
               <div className="col-sm-12 col-md-6" key={answer.id}>
-                <Radio title={answer.title} id={answer.id} name="answer" onClickRadio={(value) => this.onClickRadio(value)} />
+                <Radio 
+                  title={answer.title}
+                  id={answer.id}
+                  name="answer"
+                  checked={answer.id === parseInt(this.props.survey.survey.params.answer, 10) ?
+                    true :
+                    false}
+                  onClickRadio={(value) => this.onClickRadio(value)}
+                  />
               </div>
             )
           })

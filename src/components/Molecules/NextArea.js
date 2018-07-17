@@ -4,7 +4,7 @@ import _ from 'lodash'
 import PropTypes from 'prop-types'
 class NextArea extends Component {
   onClickButton () {
-    this.props.survey.actions.next()
+    this.props.survey.actions.next()    
   }
   render() {
     let className = ''
@@ -18,7 +18,7 @@ class NextArea extends Component {
     return (
       <div className="col-sm-6 col-md-3">
         {(() => {
-          const button = (this.props.survey.survey.answers.length < this.props.survey.survey.questions.length) ?
+          const button = (this.props.survey.survey.answers.length <= this.props.survey.survey.questions.length) ?
             <Button name="Next" onClickButton={() => this.onClickButton()} className={className} isDisabled={isDisabled} /> :
             null
           return button
