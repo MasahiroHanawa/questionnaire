@@ -1,38 +1,32 @@
 import React, { Component } from 'react'
-import Content from '../Organisms/Content'
-import Footer from '../Organisms/Footer'
+import ResultContent from '../Organisms/ResultContent'
 import * as actions from '../../actions/survey'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import '../../css/survey.scss'
-class Survey extends Component {
+class Result extends Component {
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.survey.result === true) {
-      this.props.history.push('/result')
-    } else if (this.props.survey.params.currentQuestion.id !== null &&
-    nextProps.survey.params.currentQuestion.id !== this.props.survey.params.currentQuestion.id) {
-      this.props.history.push('/survey/' + (nextProps.survey.params.currentQuestion.id))
+  componentWillReceiveProps() {
+    if (this.props.survey.result === false) {
+      this.props.history.push('/')
     }
   }
 
   componentWillMount() {
-    this.props.actions.getQuestion(this.props.location.pathname.substring(8))
-    this.props.actions.getAnswer(this.props.location.pathname.substring(8))
+    this.props.actions.clearSurveyData()
   }
 
   render() {
     return (
       <div className="container">
-        <Content survey={this.props} />
-        <Footer survey={this.props} />
+        <ResultContent survey={this.props} />
       </div>
     )
   }
 }
 
-Survey.propTypes = {
+Result.propTypes = {
   actions: PropTypes.shape({
     getAnswer: PropTypes.func.isRequired,
     getQuestion: PropTypes.func.isRequired,
@@ -72,4 +66,4 @@ const mapDispatchProps = (dispatch) => {
   return dispatchProps;
 }
 
-export default connect(mapStateToProps, mapDispatchProps)(Survey)
+export default connect(mapStateToProps, mapDispatchProps)(Result)

@@ -1,19 +1,18 @@
 import React, { Component } from 'react'
+import ResultArea from '../Molecules/ResultArea'
 import PropTypes from 'prop-types'
-import _ from 'lodash'
-class Question extends Component {
+
+class ResultContent extends Component {
   render() {
     return (
-      <div className="col-sm-12 col-md-12">
-        {!_.isEmpty(this.props.survey.survey.params.currentQuestion) ?
-        this.props.survey.survey.params.currentQuestion.title 
-        : ''}
+      <div className="row">
+        <ResultArea survey={this.props.survey} />
       </div>
     )
   }
 }
 
-Question.propTypes = {
+ResultContent.propTypes = {
   actions: PropTypes.shape({
     getAnswer: PropTypes.func.isRequired,
     getQuestion: PropTypes.func.isRequired,
@@ -35,4 +34,4 @@ Question.propTypes = {
   })
 }
 
-export default Question
+export default ResultContent

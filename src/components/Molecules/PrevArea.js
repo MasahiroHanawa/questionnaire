@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Button from '../Atoms/Button'
 import PropTypes from 'prop-types'
+import _ from 'lodash'
 class PrevArea extends Component {
 
   onClickButton () {
@@ -11,7 +12,8 @@ class PrevArea extends Component {
     return (
       <div className="col-sm-6 col-md-6">
         {(() => {
-          const button = (this.props.survey.survey.answers.length > 0) ?
+          const button = !_.isEmpty(this.props.survey.survey.answers) &&
+          this.props.survey.survey.params.currentQuestion.id !== this.props.survey.survey.answers[0].quesiton_id ?
             <Button name="Prev" onClickButton={() => this.onClickButton()} className="btn btn-primary survey__content_prev" /> :
             null
           return button

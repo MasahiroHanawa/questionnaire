@@ -23,16 +23,18 @@ export function prev() {
     })
   }
 }
-export function getQuestion() {
+export function getQuestion(question_id) {
   return (dispatch) => {
     apiClient().get('/questions')
       .then((response) => {
         dispatch({
           type: constants.GET_QUESTION,
-          questions: response.data
+          questions: response.data,
+          question_id: question_id
         })
       })
       .catch((response) => {
+        debugger
         dispatch({
           type: constants.CONNECTION_FAILED,
           questions: response
@@ -41,21 +43,31 @@ export function getQuestion() {
     )
   }
 }
-export function getAnswer() {
+export function getAnswer(question_id) {
   return (dispatch) => {
     apiClient().get('/answers')
       .then((response) => {
         dispatch({
           type: constants.GET_ANSWER,
-          answerForms: response.data
+          answerForms: response.data,
+          question_id: question_id
         })
       })
       .catch((response) => {
+        debugger
         dispatch({
           type: constants.CONNECTION_FAILED,
           answerForms: response
         })
       }
     )
+  }
+}
+
+export function clearSurveyData() {
+  return (dispatch) => {
+    dispatch({
+      type: constants.CLEAR_SURVEY_DATA
+    })
   }
 }

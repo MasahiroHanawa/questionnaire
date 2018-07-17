@@ -5,7 +5,7 @@ class Radio extends Component {
     return (
       <div className="radio">
         <span className="label label-default">{this.props.title}</span>
-        <input type="radio" name={this.props.name} onClick={(e) => this.props.onClickRadio(e.target.value)} value={this.props.id} />
+        <input type="radio" name={this.props.name} onClick={(e) => this.props.onClickRadio(e.target.value)} value={this.props.id} defaultChecked={this.props.checked}/>
       </div>
     )
   }
