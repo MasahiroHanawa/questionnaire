@@ -34,7 +34,6 @@ export function getQuestion(question_id) {
         })
       })
       .catch((response) => {
-        debugger
         dispatch({
           type: constants.CONNECTION_FAILED,
           questions: response
@@ -54,7 +53,6 @@ export function getAnswer(question_id) {
         })
       })
       .catch((response) => {
-        debugger
         dispatch({
           type: constants.CONNECTION_FAILED,
           answerForms: response

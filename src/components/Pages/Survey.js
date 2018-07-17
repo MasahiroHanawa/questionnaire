@@ -5,7 +5,6 @@ import * as actions from '../../actions/survey'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
-import '../../css/survey.scss'
 class Survey extends Component {
 
   componentWillReceiveProps(nextProps) {
@@ -24,7 +23,7 @@ class Survey extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="survey">
         <Content survey={this.props} />
         <Footer survey={this.props} />
       </div>
